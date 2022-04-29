@@ -9,12 +9,17 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
 if($ENV{BUILD_DEBUG_TYPE})
 	set(CMAKE_BUILD_TYPE Debug)
 	message("-- BUILD_TYPE: Debug")
+
+	add_compile_definitions(DEBUG_BUILD);
 else()
 	set(CMAKE_BUILD_TYPE Release)
 	message("-- BUILD_TYPE: Release")
+
+	add_compile_definitions(RELEASE_BUILD);
 endif()
 
 PROJECT(ElectricGraph VERSION 0.1)
+
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 add_subdirectory(${CMAKE_SOURCE_DIR}/assets)
