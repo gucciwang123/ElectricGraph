@@ -1,8 +1,8 @@
 #build files
 *.sh
-*/build/
-*/bin/
-*/lib/
+*/build/*
+*/bin/*
+*/lib/*
 
 */CMakeLists.txt.user
 */CMakeCache.txt
